@@ -1,3 +1,192 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+    list-style: none;    
+}
+
 html {
     scroll-behavior: smooth;
+}
+
+ul,
+h1 {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+header {
+    margin: 30px auto 30px;
+    width: 1440px;
+    text-align: center;  
+}
+
+h1 {
+    font-size: 36px;    
+}
+
+.container {
+    padding: 0 30px;
+    margin: 0 auto;
+    max-width: 1280px;
+    width: 100%;
+}
+
+.slider {
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 5px solid #000000;
+    margin-bottom: 100px;
+}
+
+.slider_img {
+    border: 5px solid #000000;
+    max-width: 1200px;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.mem {
+    width: 500%;
+    height: auto;
+    display: flex;
+    transition: 1s linear;
+}
+
+.mem_img {
+    width: 20%;
+    height: auto;
+}
+
+input {
+    display: none;
+}
+
+.slider_text {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+    
+}
+
+.text_inner {
+    height: 50px;
+    overflow: hidden;
+    
+}
+
+.text_item {
+    font-size: 42px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 1s linear;
+    height: 0px;
+    width: 0px;
+    color: #000000;
+    
+}
+
+#mem1:checked~.slider_text .text_inner .text1 {
+    visibility: visible;
+    opacity: 1;
+    height: 60px;
+    width: auto;
+}
+
+#mem2:checked~.slider_text .text_inner .text2 {
+    visibility: visible;
+    opacity: 1;
+    height: 60px;
+    width: auto;
+}
+
+#mem3:checked~.slider_text .text_inner .text3 {
+    visibility: visible;
+    opacity: 1;
+    height: 60px;
+    width: auto;
+}
+
+#mem4:checked~.slider_text .text_inner .text4 {
+    visibility: visible;
+    opacity: 1;
+    height: 60px;
+    width: auto;
+}
+
+
+.buttons {
+    display: flex;
+    gap: 20px;
+    background-color: inherit;
+}
+
+.label {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: inherit;
+}
+
+.label div {
+    cursor: pointer;
+    content: ' ';
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 3px solid #000000;
+    background-color: inherit;
+}
+
+
+
+.input:checked~.label div {
+    background-color: #000;
+}
+
+#mem1:checked~.slider_img .mem {
+    margin-left: 0;
+}
+
+#mem1:checked~.slider_text .buttons .label1 div {
+    background-color: #000000;
+    border-color: #000000;
+}
+
+#mem2:checked~.slider_img .mem {
+    margin-left: -100%;
+}
+
+#mem2:checked~.slider_text .buttons .label2 div {
+    background-color: #000000;
+    border-color: #000000;
+}
+
+#mem3:checked~.slider_img .mem {
+    margin-left: -200%;
+}
+
+#mem3:checked~.slider_text .buttons .label3 div {
+    background-color: #000000;
+    border-color: #000000;
+}
+
+#mem4:checked~.slider_img .mem {
+    margin-left: -300%;
+}
+
+#mem4:checked~.slider_text .buttons .label4 div {
+    background-color: #000000;
+    border-color: #000000;
 }
